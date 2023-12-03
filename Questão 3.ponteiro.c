@@ -16,7 +16,7 @@ int main(void)
 	pp = &p1; //pp do armazenamento é igual ao endereço de p1.
 	*p3 = **pp; //conteúdo de p3 é igual ao endereço **pp.
 	int *p4 = &d; //conteúdo de p4 é igual ao endereço de d.
-	*p4 = b + (*p1)++;
+	*p4 = b + (*p1)++;//incremento não conta no momento da soma.
 //O contéudo de p4 é igual a operação a soma de b e o
 //contéudo de p1 com imcremento.
 	printf("%d\t%d\t%d\t%d\n", a, b, c, d);
@@ -24,6 +24,6 @@ int main(void)
 //a é 11, pelo incremento em (*p1)++; de uma unidade.
 //b é 20, pois já está definido.
 //c é 10 pela igualdade entre variáveis.
-//d é 30 na operação *p4 = b + (*p1)++;, sendo a soma de p1 + b,antes do incremento.
+//d é 30 na operação *p4 = b + (*p1)++;, sendo a soma de p1 + b, antes do incremento que não é contado aqui.
 	return 0;
 }
