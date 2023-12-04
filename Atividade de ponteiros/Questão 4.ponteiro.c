@@ -5,6 +5,8 @@ void calcula_hexagono(float l, float *area, float *perimetro); A área e o perí
 hexágono regular são dados, respectivamente, por:*/
 #include <stdio.h>
 #include <math.h>
+/*A biblioteca "math.h" fornece funções matemáticas em C, como cálculos trigonométricos, exponenciais,
+logarítmicos e outras operações matemáticas. Ela é amplamente usada para realizar cálculos complexos em programas em C.*/
 #include <locale.h>
 void calcula_hexagono(float l, float *area, float *perimetro)
 {
@@ -40,3 +42,19 @@ int main()
 padrão de C. Em seguida, crie a função principal do programa e utilize a função
 calcula_hexagono para calcular a área e o perímetro de um hexágono de lado l
 informado pelo usuário.*/
+
+
+/*Informações básicas:
+os comandos da biblioteca "math.h" e suas respectivas descrições:
+
+- sin(): Calcula o seno de um ângulo.
+- cos(): Calcula o cosseno de um ângulo.
+- tan(): Calcula a tangente de um ângulo.
+- exp(): Calcula a exponencial (elevado à potência) de um número.
+- log(): Calcula o logaritmo natural de um número.
+- sqrt(): Calcula a raiz quadrada de um número.
+- pow(): Calcula a potência de um número elevado a outro número.
+- ceil(): Arredonda um número para cima para o inteiro mais próximo.
+- floor(): Arredonda um número para baixo para o inteiro mais próximo.
+- fabs(): Retorna o valor absoluto (módulo) de um número.
+- fmod(): Calcula o resto da divisão entre dois números. */
