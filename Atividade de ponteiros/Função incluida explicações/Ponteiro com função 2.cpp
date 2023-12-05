@@ -2,6 +2,7 @@
 
 /*#include <stdio.h>
 
+
 int main(void) {
     int x, y; //variáveis.
     y = 2; //atribuição de 2 a y.
