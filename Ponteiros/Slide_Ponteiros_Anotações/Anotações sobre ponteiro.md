@@ -73,12 +73,12 @@
  
 ## Operações 
 - Considerando que p é um ponteiro.
- . Soma: p + 2.
- . Subtração p - 3.
- . Incremento ++p ou p++.
- . Decremento de ponteiro --p ou p++.
- . Subtração entre dois dois ponteiros do mesmo tipo p -p2.
- - Em p - p2 ou p + p2, retornamos a um valor inteiro.
+- Soma: p + 2.
+- Subtração p - 3.
+- Incremento ++p ou p++.
+- Decremento de ponteiro --p ou p++.
+- Subtração entre dois dois ponteiros do mesmo tipo p -p2.
+- Em p - p2 ou p + p2, retornamos a um valor inteiro.
 
  ## EXEMPLO:
      int * pointer;
