@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <locale.h>
 
-//Funções das operações! com retornos!
+//Funï¿½ï¿½es das operaï¿½ï¿½es! com retornos!
 int soma(int a, int b)
 {
 	return a + b;
@@ -19,7 +19,7 @@ int divisao(int a, int b)
 {
 	return a / b;
 }
-// Função que realiza a operação escolhida, passando a e b para x e y.
+// Funï¿½ï¿½o que realiza a operaï¿½ï¿½o escolhida, passando a e b para x e y.
 int calcula(int x, int y, int (*operacao)(int, int))
 {
 	return operacao(x, y);
@@ -30,40 +30,40 @@ setlocale(LC_ALL, "portuguese");
 int operacao;
 int a;
 int b;
-    printf("Insira o primeiro número: \n");
+    printf("Insira o primeiro nÃºmero: \n");
     scanf("%d", &a);
-    printf("Insira o segundo número: \n");
+    printf("Insira o segundo nÃºmero: \n");
     scanf("%d", &b);
-    printf("Digite o número da operação (1 a 4):\n");
+    printf("Digite o nÃºmero da operaÃ§Ã£o (1 a 4):\n");
     printf("====================================\n");
-    printf("=========== 1 - adição =============\n");
-    printf("========== 2 - Subtração ===========\n");
-    printf("======= 3 - multiplicação ==========\n");
-    printf("========== 4 - divisão =============\n");
+    printf("=========== 1 - adiÃ§Ã£o =============\n");
+    printf("========== 2 - SubtraÃ§Ã£o ===========\n");
+    printf("======= 3 - multiplicaÃ§Ã£o ==========\n");
+    printf("========== 4 - divisÃ£o =============\n");
     printf("====================================\n");
     scanf("%d", &operacao);
     switch (operacao) {
 
     case 1:
-        printf("Adição: \n");
-        // Chama a função calcula, passando a função soma como argumento e as 
+        printf("AdiÃ§Ã£o: \n");
+        // Chama a funï¿½ï¿½o calcula, passando a funï¿½ï¿½o soma como argumento e as 
         //demais caso sejam escolhidas.
         printf("Resultado: %d", calcula(a, b, soma));
         break;
     case 2:
-        printf("Subtração: \n");
+        printf("SubtraÃ§Ã£o: \n");
         printf("Resultado: %d", calcula(a, b, subtracao));
         break;
     case 3:
-        printf("Multiplicação: \n");
+        printf("MultipliÃ§Ã£o: \n");
         printf("Resultado: %d", calcula(a, b, multiplicacao));
         break;
     case 4:
-        printf("Divisão: \n");
+        printf("DivisÃ£o: \n");
         printf("Resultado: %d", calcula(a, b, divisao));
         break;
     default:
-        printf("Opção inválida \n");
+        printf("OpÃ§Ã£o invalida \n");
     }
     return 0;
 }
