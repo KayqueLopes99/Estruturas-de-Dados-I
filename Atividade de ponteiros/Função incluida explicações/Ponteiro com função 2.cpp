@@ -7,6 +7,7 @@ void incremento(int *ponteiro)
     (*ponteiro)++;
 }
 
+
 // Função principal.
 int main()
 {
