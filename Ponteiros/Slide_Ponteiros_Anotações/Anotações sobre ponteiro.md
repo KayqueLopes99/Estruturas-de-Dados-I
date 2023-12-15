@@ -186,14 +186,56 @@ char *p3;
 
 
 
-   -     //(*p1)++:  o valor apontado por p1 é incrementado após a operação de desreferenciamento,
-         //ou seja, numa conta n = i + (*p1)++. sendo i = 2, (*p1) = 5, o resultado não será 8 e sim 7.
-         //E sim somente no valor impreso de p1 que será 6 com o incremento.
-         //*p1++: Neste caso, significa que o valor apontado por p1 é obtido primeiro, ou seja, ele faz somente a soma normal
+   -  //(*p1)++ ou *(p++): o valor é incremetado  
+   - o valor apontado por p1 é incrementado após a operação de desreferenciamento:
+   -     exemplo:
+     -     #include <stdio.h>
+-      int main() {
+       int n = 4;
+       int *p1;
+       int i = 3;
+       int r;
+
+       p1 = &n;
+    
+       printf("Resultado: %d\n",  r = i + (*p1)++);
+           return 0;
+           }
+   // o resultado não será 8 e sim 7.
+
+  - *p1++:
+  -  Neste caso, significa que o valor apontado por p1 é obtido primeiro, ou seja, ele faz somente a soma normal
          //sem atribuições por enquanto.
          //e em seguida, o ponteiro p1 é incrementado.
+  -     #include <stdio.h>
+
+        int main() {
+        int n = 4;
+        int *p1;
+        int i = 3;
+        int r;
+
+        p1 = &n;
+    
+         printf("Resultado: %d\n",  r = i + (*p1++));
+        return 0;
+         }
+    
          //++p1 atribui a incremento na operação e no ponteiro.
-         //n = i + (*p1)++. sendo i = 2, (*p1) = 5, logo o resultado será 8
+        #include <stdio.h>
+        int main() {
+        int n = 4;
+        int *p1;
+        int i = 3;
+        int r;
+
+        p1 = &n;
+    
+        printf("Resultado: %d\n",  r = i + ++*p1);
+        return 0;
+        }
+
+         logo o resultado será 8
 
 ## Conclusão:
 
