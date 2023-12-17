@@ -143,11 +143,11 @@ char *p3;
 }
 
 -  Função com matriz
-
-        void nomeDaFuncao(tipo matriz[][NUM_COLUNAS], int numLinhas) {
+-      
+         void nome_da_funcao(tipo nome_da_matriz[num_linhas][num_colunas]){
         // corpo da função
-        }
-
+          }
+  
 ## Usando Funções com Ponteiros 
 - Usar ponteiros como retorno de função. isso permite que uma função retorne um endereço de memória para uma variável.
 -Exemplo:
