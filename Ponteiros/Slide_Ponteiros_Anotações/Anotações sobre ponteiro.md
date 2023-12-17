@@ -35,14 +35,19 @@
 - Os ponteiros usam o operador * para fazer o acesso de dados armazenados em um endereço de memória.
 - Assim com * acessamos o contéudo da varíavel.
 ## Exemplo:
-          - float var = 3,14; // Declarou e estabeleceu um valor;
-  
-         float *point = &var; // O contéudo do ponteiro é igual ao endereço da varíavel;
+            #include <stdio.h>
+     int main(){
+   
+     float var = 3.14; // Declarou e estabeleceu um valor;
 
-        float pi = *ponteiro; // Declarou pi e associou ao contéudo do ponteiro;
+     float *point = &var; // O contéudo do ponteiro é igual ao endereço da varíavel;
 
-        *ponteiro = 1.31; // Atribuiu um novo valor ao contéudo do ponteiro;
+    float pi = *point; // Declarou pi e associou ao contéudo do ponteiro;
 
+    *point = 1.31; // Atribuiu um novo valor ao contéudo do ponteiro;
+    
+    printf("%f", var);
+      }
 ## Operadores de Ponteiros 
 - Acesso e manipulação, permitindo assim escrever e alterar os dados armazenados em memória.
 
