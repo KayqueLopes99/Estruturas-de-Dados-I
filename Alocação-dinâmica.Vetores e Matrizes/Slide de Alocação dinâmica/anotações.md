@@ -88,11 +88,12 @@ Exemplo:
       free(ponteiro);
   
 - Explicações: malloc é armazenar !
-. int *variavel: Declaração de uma variável, o qual o tipo de dado é um ponteiro para tipo(tipo *). 
-Isso significa que a varíavel pode armazenar o endereço de um tipo.
+- int *variavel: Declaração de uma variável, o qual o tipo de dado é um ponteiro para tipo(tipo *). 
+- Isso significa que a varíavel pode armazenar o endereço de um tipo.
 
-. O malloc(tamanho * sizeof(int)): A função malloc tem tamanho * sizeof(int) é a quantidade de bytes
-para armazenar. O sizeof(int) retorna o tamanho em bytes de um tipo.
+- O malloc(tamanho * sizeof(int)): A função malloc tem tamanho * sizeof(int) é a quantidade de bytes
+para armazenar.
+- O sizeof(int) retorna o tamanho em bytes de um tipo.
 
 . Multiplicando obtemos o tamanho total em bytes necessário para armazenar o vetor.
 
