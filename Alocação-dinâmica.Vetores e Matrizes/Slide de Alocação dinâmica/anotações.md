@@ -67,7 +67,7 @@ liberação manual de memória, usando a função free(). Se essa liberação.
 
 ### Estruturas e comandos
 ## Malloc:
-- Descrição: A função malloc() em C, que significa alocação de memória, é ultilizada
+- Descrição: A função malloc() em C, que significa alocação de memória, é utilizada
 para reservar um espaço de memória com um tamanho e armazenar estes dados.
 
 - Este comando é da biblioteca stdlib.h e recebe como descrição números que representam os 
