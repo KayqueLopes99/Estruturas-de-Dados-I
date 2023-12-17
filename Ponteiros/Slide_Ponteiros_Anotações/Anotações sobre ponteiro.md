@@ -192,8 +192,8 @@ char *p3;
 
    -  //(*p1)++ ou *(p++): o valor é incremetado  
    - o valor apontado por p1 é incrementado após a operação de desreferenciamento:
-   -     exemplo:
-     -     #include <stdio.h>
+-      exemplo:
+      #include <stdio.h>
 -      int main() {
        int n = 4;
        int *p1;
