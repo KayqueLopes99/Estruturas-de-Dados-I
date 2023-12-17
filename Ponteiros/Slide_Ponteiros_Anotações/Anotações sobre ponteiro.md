@@ -174,20 +174,19 @@ char *p3;
 - Isso declara um ponteiro chamado "ponteiro" que é um ponteiro para uma função que tem um tipo de retorno inteiro e dois parâmetros inteiros.
 
 ## Explicações entendidas:
--      /*#include <stdio.h>
-
+-      #include <stdio.h>
        int main(void) {
       int x, y; //variáveis.
-      y = 2; //atribuição de 2 a y.
-       int *p1, // *p2; Ponteiros.
+       y = 2; //atribuição de 2 a y.
+       int *p1, *p2; // Ponteiros.
       p1 = &y; //Endereço de  y atribuido a p1.
-      x = 1; // atribuição de 1.
+       x = 1; // atribuição de 1.
       p2 = p1; // contéudo de p1 = p2.
       (*p1)++; // incremento
-      printf("%d %d", x, y);
+       printf("%d %d", x, y);
 
       return 0;
-       }*/
+       }
 
 
 
