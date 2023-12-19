@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <locale.h>
 
-//Fun��es das opera��es! com retornos!
+//Funções das operações! com retornos!
 int soma(int a, int b)
 {
 	return a + b;
@@ -19,7 +19,7 @@ int divisao(int a, int b)
 {
 	return a / b;
 }
-// Fun��o que realiza a opera��o escolhida, passando a e b para x e y.
+// Funçõo que realiza a operaçõo escolhida, passando a e b para x e y.
 int calcula(int x, int y, int (*operacao)(int, int))
 {
 	return operacao(x, y);
@@ -46,7 +46,7 @@ int b;
 
     case 1:
         printf("Adição: \n");
-        // Chama a fun��o calcula, passando a fun��o soma como argumento e as 
+        // Chama a funçõo calcula, passando a função soma como argumento e as 
         //demais caso sejam escolhidas.
         printf("Resultado: %d", calcula(a, b, soma));
         break;
