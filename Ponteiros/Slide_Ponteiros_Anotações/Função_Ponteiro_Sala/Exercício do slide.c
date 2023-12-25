@@ -9,7 +9,7 @@ elemento da matriz com o seu respectivo índice (matriz[i][j] = i*5 + j). Em
 seguida, imprima a matriz.
 Nota: Não se esqueça de liberar a memória alocada a*/
 int main(){
-    //Já defini as linhas e colunas.
+    //Já definido as linhas e colunas.
 	int linhas = 5, colunas = 2, i, j;
 
 	// Alocação das linhas.
