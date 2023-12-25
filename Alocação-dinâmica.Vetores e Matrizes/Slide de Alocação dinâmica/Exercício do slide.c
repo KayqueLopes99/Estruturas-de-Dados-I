@@ -43,3 +43,7 @@ int main(){
 	
 	return 0;
 }
+/*Declaração dinâmica:  (n: linhas e m: colunas)
+float ** matriz = (float**) malloc(n*sizeof(float*));
+for(i=0;i<n;i++)
+    matriz[i] = (float*) malloc(m*sizeof(float));*/
