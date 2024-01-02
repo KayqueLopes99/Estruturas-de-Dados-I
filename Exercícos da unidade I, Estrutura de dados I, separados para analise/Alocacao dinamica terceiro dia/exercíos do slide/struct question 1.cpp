@@ -8,6 +8,7 @@ struct empresa {
     float salario;        // 4 bytes
     int identificador;    // 4 bytes
     char cargo[30];        // 50 bytes
+
 };
 
 void preenche(struct empresa *funcionario) {
