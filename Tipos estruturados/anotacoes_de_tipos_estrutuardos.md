@@ -202,19 +202,3 @@ float distancia (Ponto* p, Ponto* q) {
     // Retorna o valor calculado da distância.
     return d;
 }
-
-# Comandos e observações:
-
-- `%[^\n]`:
-    - É usado com a função scanf para ler até encontrar \n. 
-    - Para ler uma linhas do texto, incluindo espaços.
-    - Sintaxe : scanf("%[^\n]", string);
- 
--  `.`:
-    - Explicação: O operador é usado para acessar membros de uma estrutura ou união.
-    - Sintaxe: struct_variavel.membro
-
-- `->`:
-    - O operador é usado para acessar membros de uma estrutura ou união através de um ponteiro.
-    - Sintaxe : struct_ponteiro->membro
-
