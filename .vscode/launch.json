@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": ".",
-      "program": "build/Debug/outDebug",
+      "cwd": "c:/Users/kaiqu/OneDrive/Imagens/Estruturas-de-Dados-I",
+      "program": "c:/Users/kaiqu/OneDrive/Imagens/Estruturas-de-Dados-I/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
