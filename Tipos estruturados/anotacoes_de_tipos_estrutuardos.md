@@ -176,45 +176,28 @@ unsigned <nome do tipo de dado existente>
 
 
 - Exemplo:
-#include <stdio.h>
+-     #include <stdio.h>
 
-int main() {
-    unsigned int num = 4000000000;  // Um número maior que o máximo de um int normal
-    printf("O valor de num é: %u\n", num);
-    return 0;
-}
+      int main() {
+       unsigned int num = 4000000000;  // Um número maior que o máximo de um int normal
+        printf("O valor de num é: %u\n", num);
+       return 0;
+        }
 # Aninhamento de Estruturas: 
 - O aninhamento de estruturas ocorre quando uma estrutura é definida dentro de outra estrutura.
 - Relaciona dados e agrupa eles em uma única estrutura.
 
-// Esta estrutura representa um ponto no espaço.
-struct ponto {
-    float x;
-    float y;
-};
+- Esta estrutura representa um ponto no espaço.
+-     struct ponto {
+      float x;
+      float y;
+      };
 
-// Usando 'typedef' para criar um alias 'Ponto' para 'struct ponto'.
-typedef struct ponto Ponto;
-
-float distancia (Ponto* p, Ponto* q) {
-    // Calcula a distância euclidiana entre os pontos 'p' e 'q' usando a fórmula da distância euclidiana.
-    float d = sqrt((q->x - p->x)*(q->x - p->x) + (q->y - p->y)*(q->y - p->y));
-    // Retorna o valor calculado da distância.
-    return d;
-}
-
-# Comandos e observações:
-
-- `%[^\n]`:
-    - É usado com a função scanf para ler até encontrar \n. 
-    - Para ler uma linhas do texto, incluindo espaços.
-    - Sintaxe : scanf("%[^\n]", string);
- 
--  `.`:
-    - Explicação: O operador é usado para acessar membros de uma estrutura ou união.
-    - Sintaxe: struct_variavel.membro
-
-- `->`:
-    - O operador é usado para acessar membros de uma estrutura ou união através de um ponteiro.
-    - Sintaxe : struct_ponteiro->membro
-
+     // Usando 'typedef' para criar um alias 'Ponto' para 'struct ponto'.
+-     typedef struct ponto Ponto;
+      float distancia (Ponto* p, Ponto* q) {
+      // Calcula a distância euclidiana entre os pontos 'p' e 'q' usando a fórmula da distância euclidiana.
+      float d = sqrt((q->x - p->x)*(q->x - p->x) + (q->y - p->y)*(q->y - p->y));
+      // Retorna o valor calculado da distância.
+       return d;
+      }
