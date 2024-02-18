@@ -24,7 +24,29 @@ Inicialização: // Caso você queira já definir os valores da matriz.
         }
         printf("\n");
          }
+- Exemplo:
+#include <stdio.h>
 
+
+int main(void){
+	int matriz[3][3];
+	int i,j, num =1;
+	
+  for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+       matriz[i][j] = num++;
+        }
+         }	
+
+	for (i = 0; i < 3; i++) {
+		for (j = 0; j < 3; j++) {
+			printf("%d ", matriz[i][j]);
+		}
+		printf("\n");
+	}
+	
+	return 0;
+}
 ##  Antes de mais nada apresento-lhes o que é um Vetor:
 
 - Explicação: Um vetor é uma estrutura de dados que armazena elementos.
