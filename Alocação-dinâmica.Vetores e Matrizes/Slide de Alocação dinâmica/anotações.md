@@ -24,7 +24,7 @@ Inicialização: // Caso você queira já definir os valores da matriz.
         }
         printf("\n");
          }
-- Exemplo:
+
 #include <stdio.h>
 
 
@@ -47,6 +47,7 @@ int main(void){
 	
 	return 0;
 }
+
 ##  Antes de mais nada apresento-lhes o que é um Vetor:
 
 - Explicação: Um vetor é uma estrutura de dados que armazena elementos.
