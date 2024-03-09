@@ -189,9 +189,9 @@ if (fp != NULL) {
 - Vários módulos = (.o ou .obj).
 - Ligador (linker).
 
-. Para Programas de médio e grande porte, a sua divisão em vários módulos é fundamental.
-. str.c = Comprimento, copia, concatena. 
-. Arquivo prog1.c
+- Para Programas de médio e grande porte, a sua divisão em vários módulos é fundamental.
+- str.c = Comprimento, copia, concatena. 
+- Arquivo prog1.c
 ``` c
 int comprimento (char* s){
 int i;
