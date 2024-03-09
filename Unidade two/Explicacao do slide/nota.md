@@ -1,8 +1,7 @@
 ## Manipulação de arquivos.
 . Função básica: 
+- FILE* fopen(char* nome_arquivo, char* mado);
 
-- FILE* fopen(const char* nome_arquivo, const char* modo);
--  FILE* nome_do arquivo = fopen("nome.txt", "letra correspondente");
 # Modos de abertura de arquivo:
 .a função `fopen` é usada para abrir um arquivo e ela aceita dois argumentos:
 .o nome do arquivo e o modo de abertura.
@@ -95,7 +94,7 @@ printf("Olá, Mundo!\n");  // Isso agora será escrito em "saida.txt"
 1. fscanf: 
 . A função `fscanf` lê os dados do arquivo de acordo com o especificador de formato fornecido. 
 . Faz retorno dos argumentos lidos com sucesso.
-. fscanf(nome do arquivo no FILE, "%correspondente do tipo", endereçamento das varríaveis);
+
 ```c
 int fscanf(FILE* fp, const char* formato, ...);
 ```
@@ -177,7 +176,7 @@ if (fp != NULL) {
 
 
 
-# Introdução
+# Introdução.
 . Encapsular de quem usa um determinado tipo a forma concreta
   com que ele foi implementado.
 . Benefícios Desacoplamento da implementação do uso.
@@ -250,11 +249,4 @@ void concatena (char* dest, char* orig) {
    #include "meu_header.h"
    // Resto do código
    ```
-   ## EOF no loop while: 
-- EOF é uma constante em C que indica “fim do arquivo”. É usada em loops while para ler dados de um arquivo até que não haja mais dados. Aqui está um exemplo:
-int c;
-while ((c = getchar()) != EOF) {
-    // processa o caractere 'c'
-}
-
-Neste exemplo, getchar() lê um caractere da entrada padrão. Se não há mais caracteres (ou seja, alcançamos o fim do arquivo), getchar() retorna EOF. O loop continua até que getchar() retorne EOF.
+   
