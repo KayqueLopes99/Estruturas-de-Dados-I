@@ -39,7 +39,7 @@ if (fp == NULL) {
 fclose(fp);  // Lembre-se: fechar o arquivo quando terminar.
 ```
 
-# Funções para abrir e FCLOSE
+# fclose
 . fechar um arquivo que foi aberto anteriormente pela função fopen. 
 
 Sintaxe:
@@ -95,7 +95,7 @@ printf("Olá, Mundo!\n");  // Isso agora será escrito em "saida.txt"
 1. fscanf: 
 . A função `fscanf` lê os dados do arquivo de acordo com o especificador de formato fornecido. 
 . Faz retorno dos argumentos lidos com sucesso.
-
+. fscanf(nome do arquivo no FILE, "%correspondente do tipo", endereçamento das varríaveis);
 ```c
 int fscanf(FILE* fp, const char* formato, ...);
 ```
@@ -138,11 +138,29 @@ fgets(str, 60, fp);  // Lê a primeira linha (ou até 59 caracteres) do arquivo
 fclose(fp);
 ```
 
-# Funções para escrever texto no arquivo:
-.  Ela pode ser usada para escrever em um arquivo.
-.  A string formatada pode incluir especificadores de formato,`%d`, `%f` ... 
+## LOGO 
+- fgetc: Lê um único caractere de um arquivo de cada vez, incluindo espaços.
+- fgets: Lê uma linha inteira de um arquivo de cada vez. Uma linha é definida como uma sequência de caracteres terminada por um caractere de nova linha (\n) ou pelo fim do arquivo.
+- Ambas podem estar em um loop com EOF.
 
-.Sintaxe geral:
+# Funções para escrever texto no arquivo:
+A função fprintf em C é usada para escrever dados formatados em um arquivo.
+A sintaxe:
+
+```c
+int fprintf(FILE *stream, const char *format [, argument ]...);
+```
+
+Agora, vamos entender cada parte:
+
+1. `stream`: Este é o ponteiro para o arquivo onde você deseja escrever os dados. Ele indica qual arquivo receberá as informações formatadas.
+
+2. `format`: É uma string de formato que especifica como os dados devem ser formatados. Você pode usar especificadores de formato, como `%d` para inteiros, `%f` para números de ponto flutuante, `%s` para strings, etc. Esses especificadores serão substituídos pelos valores reais quando você escrever no arquivo.
+
+3. `argument`: São os valores que você deseja imprimir no arquivo, correspondentes aos especificadores de formato na string. Por exemplo, se você usar `%d` na string de formato, você deve fornecer um valor inteiro como argumento.
+
+Aqui está um exemplo prático:
+
 ```c
 FILE *fp = fopen("arquivo.txt", "w");
 if (fp != NULL) {
@@ -153,6 +171,12 @@ if (fp != NULL) {
     printf("Erro ao abrir o arquivo.\n");
 }
 ```
+
+
+
+
+
+
 # Introdução
 . Encapsular de quem usa um determinado tipo a forma concreta
   com que ele foi implementado.
@@ -226,4 +250,11 @@ void concatena (char* dest, char* orig) {
    #include "meu_header.h"
    // Resto do código
    ```
-   
+   ## EOF no loop while: 
+- EOF é uma constante em C que indica “fim do arquivo”. É usada em loops while para ler dados de um arquivo até que não haja mais dados. Aqui está um exemplo:
+int c;
+while ((c = getchar()) != EOF) {
+    // processa o caractere 'c'
+}
+
+Neste exemplo, getchar() lê um caractere da entrada padrão. Se não há mais caracteres (ou seja, alcançamos o fim do arquivo), getchar() retorna EOF. O loop continua até que getchar() retorne EOF.
