@@ -1,5 +1,6 @@
 ## Manipulação de arquivos.
 . Função básica: 
+
 - FILE* fopen(const char* nome_arquivo, const char* modo);
 -  FILE* nome_do arquivo = fopen("nome.txt", "letra correspondente");
 # Modos de abertura de arquivo:
