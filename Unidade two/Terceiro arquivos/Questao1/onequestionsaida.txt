@@ -1,0 +1,10 @@
+Nome: AmandaAprovado. Sua media: 7.50
+Nome: AlbertoReprovado
+Nome: JaneReprovado
+Nome: IgorAprovado. Sua media: 8.83
+Nome: SamaraAprovado. Sua media: 9.00
+Nome: MariaAprovado. Sua media: 9.00
+Nome: LuizaAprovado. Sua media: 10.00
+Nome: CesarAprovado. Sua media: 9.00
+Nome: PedroAprovado. Sua media: 9.00
+Nome: FelipeAprovado. Sua media: 7.00

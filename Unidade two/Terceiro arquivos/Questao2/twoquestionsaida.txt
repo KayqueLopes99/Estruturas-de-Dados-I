@@ -1,0 +1,4 @@
+Menor numero: 1.00
+Maior numero: 10.00
+Media dos numeros: 5.50
+Arquivo de entrada fechado com sucesso

@@ -1,0 +1,4 @@
+
+--------- As frutinhas --------------
+Nome da fruta: maca
+preco da fruta: 12.50
