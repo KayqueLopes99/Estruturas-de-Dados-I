@@ -94,7 +94,7 @@ printf("Olá, Mundo!\n");  // Isso agora será escrito em "saida.txt"
 1. fscanf: 
 . A função `fscanf` lê os dados do arquivo de acordo com o especificador de formato fornecido. 
 . Faz retorno dos argumentos lidos com sucesso.
-
+. fsacnf(nome do arquivo no FILE, "%correspondente do tipo", endereçamento das varríaveis);
 ```c
 int fscanf(FILE* fp, const char* formato, ...);
 ```
