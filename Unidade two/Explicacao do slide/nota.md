@@ -182,6 +182,7 @@ if (fp != NULL) {
 . Benefícios Desacoplamento da implementação do uso.
 
 ## Módulo 
+- Entender o que são módulos e como eles são estruturados em C. Isso inclui a compreensão de como os arquivos de cabeçalho (.h) e os arquivos de implementação (.c) trabalham juntos para formar um módulo.
 - Arquivo com funções que representam parte de uma implementação.
 -  Aimplementação é composta por mais de um módulo.
 
