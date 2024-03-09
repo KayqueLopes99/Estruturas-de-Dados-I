@@ -92,7 +92,7 @@ printf("Olá, Mundo!\n");  // Isso agora será escrito em "saida.txt"
 # Leitura dos dados no arquivo
 
 
-1. **fscanf**: 
+1. fscanf: 
 . A função `fscanf` lê os dados do arquivo de acordo com o especificador de formato fornecido. 
 . Faz retorno dos argumentos lidos com sucesso.
 
@@ -108,7 +108,7 @@ fscanf(fp, "%d", &num);  // Lê um número inteiro do arquivo
 fclose(fp);
 ```
 
-2. **fgetc**:
+2. fgetc:
 .  A função `fgetc` lê o próximo caractere de um arquivo.
 . Faz retorno do caractere lido como um `int` ou `EOF` se atingir o final ou erro.
 
@@ -122,7 +122,7 @@ int c = fgetc(fp);  // Lê o primeiro caractere do arquivo
 fclose(fp);
 ```
 
-3. **fgets**: 
+3. fgets: 
 . A função `fgets` lê uma linha do arquivo especificado. 
 . Ela lê até `n-1` caracteres ou até encontrar uma nova linha \n.
 . Terminada com um caractere nulo (`\0`).
@@ -201,16 +201,29 @@ void concatena (char* dest, char* orig) {
  ```
 
 
-# Compile.
+## Observações no .h 
+- #ifdef e #ifndef:
+   - Elas são frequentemente usadas para criar guardas de inclusão (include guards) em arquivos de cabeçalho para evitar múltiplas inclusões acidentais do mesmo arquivo.
+   - A ideia é que, se o símbolo já foi definido, o código dentro do bloco #ifdef será incluído; caso contrário, ele será ignorado.
 
+- Exemplo:
+   Suponha que temos um arquivo de cabeçalho chamado meu_header.h. Queremos garantir que ele seja incluído apenas uma vez em nosso código-fonte. Podemos fazer o seguinte:
 
+   ```c
+   // meu_header.h
 
+   #ifndef MEU_HEADER_H // Verifica se MEU_HEADER_H não está definido
+   #define MEU_HEADER_H // Define MEU_HEADER_H para evitar múltiplas inclusões
 
+   // Conteúdo do arquivo de cabeçalho aqui
 
-## Ver isso  em Python
+   #endif // Fim do bloco de inclusão
+   ```
 
+   No código-fonte (por exemplo, `main.c`), incluímos o arquivo da seguinte maneira:
 
-
-
-
-
+   ```c
+   #include "meu_header.h"
+   // Resto do código
+   ```
+   

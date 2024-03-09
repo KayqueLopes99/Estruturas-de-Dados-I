@@ -62,4 +62,4 @@ int main(void) {
 
 Neste exemplo, a função `getchar()` lê um caractere do terminal e o valor é atribuído à variável `cLetra`. Em seguida, o programa imprime o caractere digitado e seu valor na tabela ASCII⁶.
 
-# Getchar();
+
