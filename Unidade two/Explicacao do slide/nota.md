@@ -1,8 +1,7 @@
-## Manipulsção de arquivos.
-- cursor que indica a posição stdio.h <- poteiro
+## Manipulação de arquivos.
 . Função básica: 
-- FILE* fopen(char* nome_arquivo, char* mado);
-
+- FILE* fopen(const char* nome_arquivo, const char* modo);
+-  FILE* nome_do arquivo = fopen("nome.txt", "letra correspondente");
 # Modos de abertura de arquivo:
 .a função `fopen` é usada para abrir um arquivo e ela aceita dois argumentos:
 .o nome do arquivo e o modo de abertura.
