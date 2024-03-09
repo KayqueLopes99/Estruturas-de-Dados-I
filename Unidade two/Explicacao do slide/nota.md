@@ -40,8 +40,12 @@ fclose(fp);  // Lembre-se: fechar o arquivo quando terminar.
 
 # fclose
 . fechar um arquivo que foi aberto anteriormente pela função fopen. 
+- O operador “!” inverte o valor retornado pela função fclose. Portanto, se o arquivo foi fechado com sucesso (retorno zero), a condição dentro do if será verdadeira. Nesse caso, o código exibirá a mensagem “Concluído”.
+````c 
+if (!fclose(arquivo) == 0){}
+````
 
-Sintaxe:
+- Sintaxe:
 int fclose(FILE *stream);
 
 . Exemplo:
@@ -91,7 +95,7 @@ printf("Olá, Mundo!\n");  // Isso agora será escrito em "saida.txt"
 # Leitura dos dados no arquivo
 
 
-1. fscanf: 
+. fscanf: 
 . A função `fscanf` lê os dados do arquivo de acordo com o especificador de formato fornecido. 
 . Faz retorno dos argumentos lidos com sucesso.
 
@@ -106,36 +110,142 @@ int num;
 fscanf(fp, "%d", &num);  // Lê um número inteiro do arquivo
 fclose(fp);
 ```
+### fgetc()
+- A função fgetc() é usada para ler um caractere de um arquivo.
 
-2. fgetc:
-.  A função `fgetc` lê o próximo caractere de um arquivo.
-. Faz retorno do caractere lido como um `int` ou `EOF` se atingir o final ou erro.
+int fgetc(FILE *fp);
+- O parâmetro fp é um ponteiro para o arquivo que será lido.
 
-```c
-int fgetc(FILE* fp);
-```
-Exemplo de uso:
-```c
-FILE *fp = fopen("arquivo.txt", "r");
-int c = fgetc(fp);  // Lê o primeiro caractere do arquivo
-fclose(fp);
-```
+- Exemplo: lendo com a função fgetc()
+- Neste exemplo, o arquivo "arquivo.txt" é aberto para leitura. Em seguida, o caractere 'A' é lido do arquivo. Por fim, o arquivo é fechado. Portanto, considerando que o arquivo "arquivo.txt" contenha apenas o caractere 'A', o programa imprimirá na tela o caractere 'A'.
+`````c
+#include <stdio.h>
 
-3. fgets: 
-. A função `fgets` lê uma linha do arquivo especificado. 
-. Ela lê até `n-1` caracteres ou até encontrar uma nova linha \n.
-. Terminada com um caractere nulo (`\0`).
+int main() {
+    FILE *fp;
+    int c;
 
-```c
-char* fgets(char* s, int n, FILE* fp);
-```
-Exemplo de uso:
-```c
-FILE *fp = fopen("arquivo.txt", "r");
-char str[60];
-fgets(str, 60, fp);  // Lê a primeira linha (ou até 59 caracteres) do arquivo
-fclose(fp);
-```
+    fp = fopen("arquivo.txt", "r");
+    if (fp == NULL) {
+        printf("Erro ao abrir o arquivo.\n");
+        return 1;
+    }
+    c = fgetc(fp); // Lê um caractere do arquivo
+    printf("%c\n", c); // Imprime o caractere lido
+    fclose(fp);
+
+    return 0;
+}
+`````
+
+### fputc()
+- A função fputc() é usada para escrever um caractere em um arquivo.
+int fputc(int c, FILE *fp);
+- O primeiro parâmetro é o caractere que será escrito. O segundo parâmetro é um ponteiro para o arquivo que será escrito.
+
+- Exemplo: escrevendo com a função fputc()
+Neste exemplo, o arquivo "arquivo.txt" é aberto para escrita. Em seguida, o caractere 'A' é escrito no arquivo. Por fim, o arquivo é fechado.
+`````c
+#include <stdio.h>
+
+int main() {
+    FILE *fp;
+
+    fp = fopen("arquivo.txt", "w");
+    if (fp == NULL) {
+        printf("Erro ao abrir o arquivo.\n");
+        return 1;
+    }
+    fputc('A', fp); // Escreve o caractere 'A' no arquivo apontado por fp
+    fclose(fp);
+
+    return 0;
+}
+`````
+
+### feof()
+- A função feof() é usada para verificar se o final de um arquivo foi atingido.
+int feof(FILE *fp);
+- O parâmetro fp é um ponteiro para o arquivo que será verificado.
+
+- Exemplo: Veficando se chegamos ao final do arquivo
+````` c
+#include <stdio.h>
+
+int main() {
+    FILE *fp;
+    int c;
+
+    fp = fopen("arquivo.txt", "r"); // Abre o arquivo
+    if (fp == NULL) {
+        printf("Erro ao abrir o arquivo.\n");
+        return 1;
+    }
+    while (!feof(fp)) { // Enquanto não chegar ao final do arquivo
+        c = fgetc(fp); // Lê um caractere do arquivo
+        printf("%c", c); // Imprime o caractere lido
+    }
+    fclose(fp); // Fecha o arquivo
+
+    return 0;
+}
+`````
+
+### fgets()
+- A função fgets() é usada para ler uma linha de um arquivo.
+char *fgets(char *str, int n, FILE *fp);
+
+- O primeiro parâmetro é um ponteiro para uma string que será usada para armazenar a linha lida. O segundo parâmetro é o número máximo de caracteres que podem ser lidos. O terceiro parâmetro é um ponteiro para o arquivo que será lido.
+
+Exemplo: lendo com a função fgets()
+- Neste exemplo, o arquivo "arquivo.txt" é aberto para leitura. Em seguida, uma linha do arquivo é lida e armazenada na string str. Por fim, o arquivo é fechado. Portanto, considerando que o arquivo "arquivo.txt" contenha apenas a linha "Hello World!", o programa imprimirá na tela a string "Hello World!".
+
+````` c
+#include <stdio.h>
+
+int main() {
+    FILE *fp;
+    char str[100];
+
+    fp = fopen("arquivo.txt", "r");
+    if (fp == NULL) {
+        printf("Erro ao abrir o arquivo.\n");
+        return 1;
+    }
+    fgets(str, 100, fp); // Lê uma linha do arquivo fp e armazena na string str com no máximo 100 caracteres
+    printf("%s", str); // Imprime a string lida
+    fclose(fp);
+
+    return 0;
+}
+`````
+
+### fputs()
+- A função fputs() é usada para escrever uma string em um arquivo.
+int fputs(const char *str, FILE *fp);
+
+- O primeiro parâmetro é a string que será escrita. O segundo parâmetro é um ponteiro para o arquivo que será escrito.
+
+- Exemplo: escrevendo com a função fputs()
+- Neste exemplo, o arquivo "arquivo.txt" é aberto para escrita. Em seguida, a string "Hello World!" é escrita no arquivo. Por fim, o arquivo é fechado.
+````` c
+
+#include <stdio.h>
+
+int main() {
+    FILE *fp;
+
+    fp = fopen("arquivo.txt", "w");
+    if (fp == NULL) {
+        printf("Erro ao abrir o arquivo.\n");
+        return 1;
+    }
+    fputs("Hello World!", fp); // Escreve a string "Hello World!" no arquivo apontado por fp
+    fclose(fp);
+
+    return 0;
+}
+`````
 
 ## LOGO 
 - fgetc: Lê um único caractere de um arquivo de cada vez, incluindo espaços.
@@ -182,12 +292,27 @@ if (fp != NULL) {
 . Benefícios Desacoplamento da implementação do uso.
 
 ## Módulo 
-- Entender o que são módulos e como eles são estruturados em C. Isso inclui a compreensão de como os arquivos de cabeçalho (.h) e os arquivos de implementação (.c) trabalham juntos para formar um módulo.
-- Arquivo com funções que representam parte de uma implementação.
--  Aimplementação é composta por mais de um módulo.
+# Módulos em C
 
-- Vários módulos = (.o ou .obj).
-- Ligador (linker).
+- Encapsulação: A encapsulação esconde a implementação concreta de um determinado tipo de quem o utiliza.
+
+- Desacoplamento: O desacoplamento da implementação do uso é uma das principais vantagens dos módulos em C.
+
+## Tópicos Importantes
+
+1. Definição de Módulos: Entender o que são módulos e como eles são estruturados em C. Isso inclui a compreensão de como os arquivos de cabeçalho (.h) e os arquivos de implementação (.c) trabalham juntos para formar um módulo.
+
+2. Criação de Módulos: Aprender a criar seus próprios módulos. Isso envolve escrever arquivos de cabeçalho e implementação, bem como entender onde colocar declarações de funções, variáveis globais, definições de tipos e outras informações.
+
+3. Uso de Módulos: Saber como incluir e usar módulos em seu código. Isso inclui o uso da diretiva `#include` e a compreensão de como o compilador lida com ela.
+
+4. Proteção de Módulos: Entender como usar a diretiva `#ifndef` para evitar que um módulo seja incluído mais de uma vez.
+
+5. Divisão de Código em Módulos: Aprender a dividir seu código em módulos lógicos para melhor organização e reutilização de código.
+
+6. Compilação de Módulos: Compreender como compilar e vincular módulos juntos para formar um programa executável.
+
+7. Módulos e Escopo: Entender como o escopo funciona com módulos, incluindo o conceito de variáveis globais e funções estáticas.
 
 - Para Programas de médio e grande porte, a sua divisão em vários módulos é fundamental.
 - str.c = Comprimento, copia, concatena. 
