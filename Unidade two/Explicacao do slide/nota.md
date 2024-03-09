@@ -1,5 +1,4 @@
 ## Manipulação de arquivos.
-- cursor que indica a posição stdio.h <- poteiro
 . Função básica: 
 - FILE* fopen(const char* nome_arquivo, const char* modo);
 -  FILE* nome_do arquivo = fopen("nome.txt", "letra correspondente");
