@@ -220,6 +220,36 @@ int main() {
 }
 `````
 
+## feof()
+- A função feof() é usada para verificar se o final de um arquivo foi atingido.
+````c
+int feof(FILE *fp);`
+````
+- O parâmetro fp é um ponteiro para o arquivo que será verificado.
+
+- Exemplo: 
+```` c
+#include <stdio.h>
+
+int main() {
+    FILE *fp;
+    int c;
+
+    fp = fopen("arquivo.txt", "r"); // Abre o arquivo
+    if (fp == NULL) {
+        printf("Erro ao abrir o arquivo.\n");
+        return 1;
+    }
+    while (!feof(fp)) { // Enquanto não chegar ao final do arquivo
+        c = fgetc(fp); // Lê um caractere do arquivo
+        printf("%c", c); // Imprime o caractere lido
+    }
+    fclose(fp); // Fecha o arquivo
+
+    return 0;
+} 
+````
+
 ### fputs()
 - A função fputs() é usada para escrever uma string em um arquivo.
 int fputs(const char *str, FILE *fp);
